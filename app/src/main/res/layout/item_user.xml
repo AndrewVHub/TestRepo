@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_box_16"
+    android:backgroundTint="@color/white">
+
+    <View
+        android:id="@+id/image_box"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_box_8"
+        android:backgroundTint="@color/background_secondary"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_not_found"
+        app:layout_constraintBottom_toBottomOf="@id/image_box"
+        app:layout_constraintEnd_toEndOf="@id/image_box"
+        app:layout_constraintStart_toStartOf="@id/image_box"
+        app:layout_constraintTop_toTopOf="@id/image_box" />
+
+    <TextView
+        android:id="@+id/hashtag"
+        style="@style/Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:height="16dp"
+        android:textAllCaps="true"
+        android:textColor="@color/fill_tertiary"
+        app:layout_constraintStart_toEndOf="@id/image_box"
+        app:layout_constraintTop_toTopOf="@id/image_box"
+        tools:text="#kotlin" />
+
+    <TextView
+        android:id="@+id/user_name"
+        style="@style/Subtitle2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/fill_primary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintStart_toStartOf="@id/hashtag"
+        app:layout_constraintTop_toBottomOf="@id/hashtag"
+        tools:text="UserName" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/start_guideline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/end_guideline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

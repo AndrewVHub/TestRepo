@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.home.detail.UserDetailFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/primary_toolbar_background"
+        android:elevation="0dp"
+        app:elevation="35dp"
+        app:liftOnScroll="true"
+        app:titleEnabled="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="0dp"
+            app:collapsedTitleGravity="center_vertical|start"
+            app:collapsedTitleTextAppearance="@style/Subtitle2"
+            app:collapsedTitleTextColor="@color/fill_white"
+            app:elevation="0dp"
+            app:expandedTitleGravity="top|start"
+            app:expandedTitleMarginTop="16dp"
+            app:expandedTitleTextAppearance="@style/Subtitle1"
+            app:expandedTitleTextColor="@color/fill_white"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:title="@string/user_detail_fragment_title"
+            app:titleCollapseMode="scale"
+            app:titleEnabled="true">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="104dp" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:elevation="0dp"
+                app:contentInsetEnd="0dp"
+                app:contentInsetEndWithActions="0dp"
+                app:contentInsetLeft="0dp"
+                app:contentInsetRight="0dp"
+                app:contentInsetStart="24dp"
+                app:contentInsetStartWithNavigation="0dp"
+                app:elevation="0dp"
+                app:layout_collapseMode="pin"
+                app:title="@string/common_home"
+                app:titleMargin="0dp"
+                app:titleMarginBottom="0dp"
+                app:titleMarginEnd="0dp"
+                app:titleMarginStart="0dp"
+                app:titleMarginTop="0dp"
+                app:titleMargins="0dp"
+                app:titleTextAppearance="@style/Headline2">
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:behavior_overlapTop="35dp"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_rounded_top_30"
+            android:backgroundTint="@color/background_secondary">
+
+            <TextView
+                android:id="@+id/empty_data_text"
+                style="@style/Subtitle3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/common_no_data"
+                android:textAllCaps="true"
+                android:textColor="@color/fill_secondary"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/image_box"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/bg_box_8"
+                android:backgroundTint="@color/white"
+                app:layout_constraintEnd_toStartOf="@+id/end_guideline"
+                app:layout_constraintStart_toStartOf="@+id/start_guideline"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/user_image"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                app:layout_constraintBottom_toBottomOf="@+id/image_box"
+                app:layout_constraintEnd_toEndOf="@+id/image_box"
+                app:layout_constraintStart_toStartOf="@+id/image_box"
+                app:layout_constraintTop_toTopOf="@+id/image_box"
+                app:shapeAppearance="@style/Widget.ShapeImage15"
+                tools:src="@drawable/placeholder" />
+
+            <TextView
+                android:id="@+id/user_name"
+                style="@style/Headline1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:textColor="@color/fill_primary"
+                app:layout_constraintStart_toStartOf="@+id/start_inner_guideline"
+                app:layout_constraintTop_toBottomOf="@+id/image_box"
+                tools:text="userName" />
+
+            <ImageView
+                android:id="@+id/language_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/user_name"
+                app:layout_constraintEnd_toStartOf="@+id/end_inner_guideline"
+                app:layout_constraintTop_toTopOf="@+id/user_name"
+                tools:src="@drawable/ic_kotlin"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/forks_title"
+                style="@style/Body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/user_detail_fragment_user_forks"
+                app:layout_constraintStart_toStartOf="@+id/start_inner_guideline"
+                app:layout_constraintTop_toBottomOf="@+id/user_name" />
+
+            <TextView
+                android:id="@+id/forks_value"
+                style="@style/Body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/forks_title"
+                app:layout_constraintEnd_toStartOf="@+id/end_inner_guideline"
+                app:layout_constraintTop_toTopOf="@+id/forks_title"
+                tools:text="3565" />
+
+            <TextView
+                android:id="@+id/watchers_title"
+                style="@style/Body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/user_detail_fragment_user_watchers"
+                app:layout_constraintStart_toStartOf="@+id/start_inner_guideline"
+                app:layout_constraintTop_toBottomOf="@+id/forks_title" />
+
+            <TextView
+                android:id="@+id/watchers_value"
+                style="@style/Body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/watchers_title"
+                app:layout_constraintEnd_toStartOf="@+id/end_inner_guideline"
+                app:layout_constraintTop_toTopOf="@+id/watchers_title"
+                tools:text="3565" />
+
+            <TextView
+                android:id="@+id/git_hub_title"
+                style="@style/Body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/user_detail_fragment_user_git_hub"
+                app:layout_constraintStart_toStartOf="@+id/start_inner_guideline"
+                app:layout_constraintTop_toBottomOf="@+id/watchers_title" />
+
+            <ImageView
+                android:id="@+id/image_copy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_download"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/git_hub_title"
+                app:layout_constraintEnd_toStartOf="@+id/end_inner_guideline"
+                app:layout_constraintTop_toTopOf="@+id/git_hub_title"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/description"
+                style="@style/Body"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toStartOf="@+id/end_inner_guideline"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/start_inner_guideline"
+                app:layout_constraintTop_toBottomOf="@+id/git_hub_title"
+                tools:text="- Включите нижнюю навигационную панель с пятью вкладками. Реализуйте только первую вкладку для этой задачи.
+- Обеспечьте сохранение текущей позиции прокрутки списка репозиториев при переключении вкладок.
+" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/start_inner_guideline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="44dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/end_inner_guideline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="44dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/start_guideline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="24dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/end_guideline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="24dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

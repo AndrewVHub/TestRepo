@@ -2,13 +2,16 @@
     <string name="app_name">TestRepo</string>
     <string name="common_others_navigation_name">Другие</string>
     <string name="common_home">Главная</string>
+    <string name="common_no_data">Нет данных</string>
+    <string name="common_link_coped">Ссылка скопирована</string>
 
-    <!--Api Throwables-->
-    <string name="api_exception_timeout">Истекло время ожидания ответа сервера</string>
-    <string name="api_exception_service">Ошибка сервера</string>
-    <string name="api_exception_connection">Отсутствует подключение к Интернету</string>
-    <string name="api_exception_unknown">Неизвестная ошибка</string>
-    <string name="api_exception_file_upload_error">Не удалось загрузить файл</string>
-    <string name="api_exception_file_upload_error_size">Превышен максимальный размер файла</string>
-    <string name="api_exception_repeat_later">Ошибка сервиса, повторите попытку позднее</string>
+    <string name="language_kotlin">Kotlin</string>
+    <string name="language_java">Java</string>
+    <string name="language_no_data">Нет данных</string>
+
+    <!--User Detail Fragment-->
+    <string name="user_detail_fragment_title">Информация о пользователе</string>
+    <string name="user_detail_fragment_user_forks">Forks</string>
+    <string name="user_detail_fragment_user_watchers">Watchers</string>
+    <string name="user_detail_fragment_user_git_hub">GitHub</string>
 </resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home_navigation"
+        android:checked="true"
+        android:icon="@drawable/ic_home"
+        android:title="@string/common_home" />
+    <item
+        android:id="@+id/second_navigation"
+        android:icon="@drawable/ic_others_navigation"
+        android:title="@string/common_others_navigation_name" />
+
+    <item
+        android:id="@+id/third_navigation"
+        android:icon="@drawable/ic_others_navigation"
+        android:title="@string/common_others_navigation_name" />
+    <item
+        android:id="@+id/fourth_navigation"
+        android:icon="@drawable/ic_others_navigation"
+        android:title="@string/common_others_navigation_name" />
+    <item
+        android:id="@+id/fifth_navigation"
+        android:icon="@drawable/ic_others_navigation"
+        android:title="@string/common_others_navigation_name" />
+</menu>

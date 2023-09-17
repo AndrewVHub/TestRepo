@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/home_navigation">
+    <fragment
+        android:id="@+id/home_navigation"
+        android:name="com.example.testrepo.ui.fragment.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home_navigation_to_userDetailFragment"
+            app:destination="@id/userDetailFragment"
+            app:popEnterAnim="@anim/nav_default_enter_anim">
+
+            <argument
+                android:name="user_id"
+                app:argType="integer" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/second_navigation"
+        android:name="com.example.testrepo.ui.fragment.second.SecondFragment"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_second" />
+    <fragment
+        android:id="@+id/third_navigation"
+        android:name="com.example.testrepo.ui.fragment.third.ThirdFragment"
+        android:label="fragment_third"
+        tools:layout="@layout/fragment_third" />
+    <fragment
+        android:id="@+id/fourth_navigation"
+        android:name="com.example.testrepo.ui.fragment.fourth.FourthFragment"
+        android:label="fragment_fourth"
+        tools:layout="@layout/fragment_fourth" />
+    <fragment
+        android:id="@+id/fifth_navigation"
+        android:name="com.example.testrepo.ui.fragment.fifth.FifthFragment"
+        android:label="fragment_fifth"
+        tools:layout="@layout/fragment_fifth" />
+    <fragment
+        android:id="@+id/userDetailFragment"
+        android:name="com.example.testrepo.ui.fragment.home.detail.UserDetailFragment"
+        android:label="fragment_user_detail"
+        tools:layout="@layout/fragment_user_detail" />
+</navigation>

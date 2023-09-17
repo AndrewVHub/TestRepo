@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.home.HomeFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/primary_toolbar_background"
+        android:elevation="0dp"
+        app:elevation="35dp"
+        app:liftOnScroll="true"
+        app:titleEnabled="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="0dp"
+            app:collapsedTitleGravity="center_vertical|start"
+            app:collapsedTitleTextAppearance="@style/Subtitle2"
+            app:collapsedTitleTextColor="@color/fill_white"
+            app:elevation="0dp"
+            app:expandedTitleGravity="top|start"
+            app:expandedTitleMarginTop="16dp"
+            app:expandedTitleTextAppearance="@style/Subtitle1"
+            app:expandedTitleTextColor="@color/fill_white"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:title="@string/common_home"
+            app:titleCollapseMode="scale"
+            app:titleEnabled="true">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="104dp" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:elevation="0dp"
+                app:contentInsetEnd="0dp"
+                app:contentInsetEndWithActions="0dp"
+                app:contentInsetLeft="0dp"
+                app:contentInsetRight="0dp"
+                app:contentInsetStart="24dp"
+                app:contentInsetStartWithNavigation="0dp"
+                app:elevation="0dp"
+                app:layout_collapseMode="pin"
+                app:title="@string/common_home"
+                app:titleMargin="0dp"
+                app:titleMarginBottom="0dp"
+                app:titleMarginEnd="0dp"
+                app:titleMarginStart="0dp"
+                app:titleMarginTop="0dp"
+                app:titleMargins="0dp"
+                app:titleTextAppearance="@style/Headline2">
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_rounded_top_30"
+        android:backgroundTint="@color/background_secondary"
+        app:behavior_overlapTop="35dp"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_users"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_user" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <TextView
+            android:id="@+id/empty_data_text"
+            style="@style/Subtitle3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/common_no_data"
+            android:textAllCaps="true"
+            android:textColor="@color/fill_secondary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/icon_scroll_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:padding="15dp"
+            android:src="@drawable/ic_arrow_scroll_up"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="ContentDescription"
+            tools:visibility="visible" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
