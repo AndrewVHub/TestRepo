@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Widget" />
+
+    <style name="Headline1">
+        <item name="fontFamily">@font/bliss_pro_800</item>
+        <item name="android:textSize">30sp</item>
+        <item name="lineHeight">32sp</item>
+    </style>
+
+    <style name="Headline2">
+        <item name="fontFamily">@font/bliss_pro_700</item>
+        <item name="android:textSize">22sp</item>
+        <item name="lineHeight">24sp</item>
+    </style>
+
+    <style name="Subtitle1">
+        <item name="fontFamily">@font/bliss_pro_700</item>
+        <item name="android:textSize">18sp</item>
+        <item name="lineHeight">24sp</item>
+    </style>
+
+    <style name="Subtitle2">
+        <item name="fontFamily">@font/bliss_pro_700</item>
+        <item name="android:textSize">16sp</item>
+        <item name="lineHeight">24sp</item>
+    </style>
+
+    <style name="Subtitle3">
+        <item name="fontFamily">@font/bliss_pro_800</item>
+        <item name="android:textSize">14sp</item>
+        <item name="lineHeight">16sp</item>
+    </style>
+
+    <style name="Body">
+        <item name="fontFamily">@font/bliss_pro_400</item>
+        <item name="android:textSize">14sp</item>
+        <item name="lineHeight">19sp</item>
+    </style>
+
+    <style name="Body2">
+        <item name="fontFamily">@font/bliss_pro_400</item>
+        <item name="android:textSize">13sp</item>
+        <item name="lineHeight">16sp</item>
+    </style>
+
+    <style name="Button">
+        <item name="fontFamily">@font/bliss_pro_800</item>
+        <item name="android:textSize">11sp</item>
+        <item name="lineHeight">16sp</item>
+    </style>
+
+    <style name="Widget.Button" parent="@style/Widget.Material3.Button">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay10</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textAppearance">@style/Button</item>
+        <item name="elevation">0dp</item>
+        <item name="backgroundTint">@color/main_color_active</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:padding">0dp</item>
+        <item name="background">?selectableItemBackground</item>
+    </style>
+
+    <style name="Widget.Button.TextButton" parent="@style/Widget.Material3.Button.TextButton">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay10</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textAppearance">@style/Button</item>
+        <item name="elevation">0dp</item>
+        <item name="android:textColor">@color/main_color_active</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay7">
+        <item name="cornerSize">7dp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay10">
+        <item name="cornerSize">10dp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay12">
+        <item name="cornerSize">12dp</item>
+    </style>
+
+</resources>

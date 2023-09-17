@@ -1,9 +1,19 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.TestRepo" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    <style name="Theme.TestTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/main_color_active</item>
+        <item name="colorPrimaryVariant">@color/main_color_gray_bb</item>
+        <item name="colorOnPrimary">@color/background_primary</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/fill_secondary</item>
+        <item name="colorSecondaryVariant">@color/background_secondary</item>
+        <item name="colorOnSecondary">@color/background_secondary</item>
+        <item name="android:windowBackground">@color/background_secondary</item>
+        <!-- Customize your theme here. -->
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
     </style>
-
-    <style name="Theme.TestRepo" parent="Base.Theme.TestRepo" />
 </resources>

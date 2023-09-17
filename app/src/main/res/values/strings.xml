@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">TestRepo</string>
+    <string name="common_others_navigation_name">Другие</string>
+    <string name="common_home">Главная</string>
+
+    <!--Api Throwables-->
+    <string name="api_exception_timeout">Истекло время ожидания ответа сервера</string>
+    <string name="api_exception_service">Ошибка сервера</string>
+    <string name="api_exception_connection">Отсутствует подключение к Интернету</string>
+    <string name="api_exception_unknown">Неизвестная ошибка</string>
+    <string name="api_exception_file_upload_error">Не удалось загрузить файл</string>
+    <string name="api_exception_file_upload_error_size">Превышен максимальный размер файла</string>
+    <string name="api_exception_repeat_later">Ошибка сервиса, повторите попытку позднее</string>
 </resources>
